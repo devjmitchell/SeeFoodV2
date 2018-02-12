@@ -18,16 +18,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qtv-lq-fw1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotdogBackground" translatesAutoresizingMaskIntoConstraints="NO" id="bjv-2i-aZt" userLabel="Static Hotdog Image">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="RSh-vR-9EH"/>
+                                    <constraint firstAttribute="width" constant="240" id="pqA-KF-D3s"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qtv-lq-fw1" userLabel="User Chosen Image">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jwK-UO-KHz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="Ytx-AS-1aA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxl-D9-GfG">
+                                <rect key="frame" x="114" y="569" width="146" height="58"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="7ck-rC-lrm"/>
+                                    <constraint firstAttribute="height" constant="58" id="ull-Wz-Fst"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shareTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bHG-KR-daW"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.83529411764705885" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="bjv-2i-aZt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0qu-XP-qzq"/>
                             <constraint firstItem="Qtv-lq-fw1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J7a-eN-3kZ"/>
+                            <constraint firstItem="jwK-UO-KHz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jwz-wa-2g3"/>
+                            <constraint firstItem="Qxl-D9-GfG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KSN-fl-Ygk"/>
                             <constraint firstItem="Qtv-lq-fw1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QA1-Gv-gOr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qtv-lq-fw1" secondAttribute="trailing" id="TQT-37-3I3"/>
+                            <constraint firstItem="jwK-UO-KHz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WNc-hd-egn"/>
+                            <constraint firstItem="jwK-UO-KHz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="X5l-Ew-jhQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jwK-UO-KHz" secondAttribute="trailing" id="XWu-Jj-QSX"/>
+                            <constraint firstItem="jwK-UO-KHz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YKX-v9-fZG"/>
+                            <constraint firstItem="jwK-UO-KHz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c2Q-7d-lk8"/>
+                            <constraint firstItem="jwK-UO-KHz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gwd-7R-IY6"/>
+                            <constraint firstItem="jwK-UO-KHz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hSU-og-bva"/>
+                            <constraint firstItem="bjv-2i-aZt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="j7D-TR-yrr"/>
+                            <constraint firstItem="jwK-UO-KHz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jv1-4W-9zk"/>
+                            <constraint firstItem="jwK-UO-KHz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mEn-Ci-mE6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qtv-lq-fw1" secondAttribute="bottom" id="pe5-6z-W62"/>
+                            <constraint firstItem="jwK-UO-KHz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uQZ-vf-LYT"/>
+                            <constraint firstItem="jwK-UO-KHz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wFt-wu-zSm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qxl-D9-GfG" secondAttribute="bottom" constant="40" id="weg-6i-NFN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -41,6 +90,8 @@
                     <connections>
                         <outlet property="cameraButton" destination="hmP-Ch-Bf0" id="5Et-xN-glH"/>
                         <outlet property="imageView" destination="Qtv-lq-fw1" id="g5B-Hl-PKk"/>
+                        <outlet property="shareButton" destination="Qxl-D9-GfG" id="lld-TR-08g"/>
+                        <outlet property="topBarImageView" destination="jwK-UO-KHz" id="riW-4r-tEb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -55,6 +106,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gYN-Zb-aLo">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                            <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -66,4 +121,7 @@
             <point key="canvasLocation" x="-222" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hotdogBackground" width="191" height="143"/>
+    </resources>
 </document>
