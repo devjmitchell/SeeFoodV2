@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import VisualRecognitionV3
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    let apiKey = "09c2fbbff480bebce6ca9f11877df95237794def"
+    let version = "2018-02-11"
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
@@ -28,6 +32,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             imageView.image = image
             
             imagePicker.dismiss(animated: true, completion: nil)
+            
+            let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
+            
+            let imageData = UIImageJPEGRepresentation(image, 0.01)
+            
+            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            
+            let fileURL = documentsURL.appendingPathComponent("tempImage.jpg")
+            
+            try? imageData?.write(to: fileURL, options: [])
+            
+            visualRecognition.classify(imageFile: fileURL, success: { (classifiedImages) in
+                print(classifiedImages)
+            })
             
         } else {
             print("There was an error picking the image")
